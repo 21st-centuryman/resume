@@ -24,16 +24,16 @@ jobs:
         run: |
           for file in personal_letter/swedish/industries/*; do
             sed -i "s|\\subfile{personal_letter/swedish/industries/ignore}|\\subfile{personal_letter/swedish/industries/$(basename "$file" .tex)}|g" "swedish.tex"
-            pdflatex -jobname=swedish_$file "swedish.tex"
-          find . -type f ! -name "*.pdf" -delete
+            pdflatex -output-directory=pdfs -jobname=swedish_$file "swedish.tex"
+          find pdfs/ -type f ! -name "*.pdf" -delete
           done
 
       - name: Create CV - English
         run: |
           for file in personal_letter/english/industries/*; do
             sed -i "s|\\subfile{personal_letter/english/industries/ignore}|\\subfile{personal_letter/english/industries/$(basename "$file" .tex)}|g" "english.tex"
-            pdflatex -jobname=english_$file "english.tex"
-            find . -type f ! -name "*.pdf" -delete
+            pdflatex -output-directory=pdfs -jobname=english_$file "english.tex"
+            find pdfs/ -type f ! -name "*.pdf" -delete
           done
 
       - name: cleanup
