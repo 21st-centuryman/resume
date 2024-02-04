@@ -21,7 +21,7 @@ jobs:
 
       - name: Create CV - Swedish
         run: |
-          cd ./cv/swedish/industrier/
+          cd cv/swedish/industrier/
           for file in *; do
             echo "-------------------------"
             echo $file
