@@ -21,10 +21,8 @@ jobs:
 
       - name: Create CV - Swedish
         run: |
-          pwd
-          ls
-          cd cv/swedish/industrier/
-          for file in *; do
+          #ls
+          for file in cd/swedish/industrier/*; do
             echo "-------------------------"
             echo $file
             echo "-------------------------"
