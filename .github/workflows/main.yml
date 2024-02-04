@@ -25,12 +25,12 @@ jobs:
             pdflatex -jobname=swedish_$(basename "$file" .tex) "swedish.tex"
           done
 
-      - name: Create CV - English
-        run: |
-          for file in ./cv/english/industries/*; do
-            sed -i "s|\\subfile{personal_letter/english/industries/test}|\\subfile{personal_letter/english/industries/$(basename "$file" .tex)}|g" "english.tex"
-            pdflatex -jobname=english_$(basename "$file" .tex) "english.tex"
-          done
+      #      - name: Create CV - English
+      #        run: |
+      #          for file in ./cv/english/industries/*; do
+      #            sed -i "s|\\subfile{personal_letter/english/industries/test}|\\subfile{personal_letter/english/industries/$(basename "$file" .tex)}|g" "english.tex"
+      #            pdflatex -jobname=english_$(basename "$file" .tex) "english.tex"
+      #          done
 
       - name: Upload CV
         uses: actions/upload-artifact@v2
