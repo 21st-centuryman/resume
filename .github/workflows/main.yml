@@ -29,7 +29,7 @@ jobs:
         run: |
           for file in ./cv/english/industries/*.tex; do
             sed -i "s|\\subfile{personal_letter/english/industries/test}|\\subfile{personal_letter/english/industries/$(basename "$file" .tex)}|g" "english.tex"
-            pdflatex "english_$file.tex"
+            pdflatex -jobname=english_$(basename "$file" .tex) "english.tex"
           done
 
       - name: Upload CV
