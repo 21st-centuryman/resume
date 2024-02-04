@@ -22,23 +22,24 @@ jobs:
       - name: Create CV - Swedish
         run: |
           for file in ./cv/swedish/industrier/*; do
+            echo $file
             sed -i "s|\\subfile{personal_letter/swedish/industrier/ignore}|\\subfile{personal_letter/swedish/industrier/$(basename "$file" .tex)}|g" "swedish.tex"
             pdflatex -jobname=swedish_1 "swedish.tex"
           done
 
-      - name: Create CV - English
-        run: |
-          for file in ./cv/english/industries/*; do
-            sed -i "s|\\subfile{personal_letter/english/industries/ignore}|\\subfile{personal_letter/english/industries/$(basename "$file" .tex)}|g" "english.tex"
-            pdflatex -jobname=english_2 "english.tex"
-          done
-      - name: cleanup
-        run: |
-          find . -type f ! -name "*.pdf" -delete
-
-      - name: Upload CV
-        uses: actions/upload-artifact@v2
-        with:
-          name: CVs
-          path: |
-            ./
+      #      - name: Create CV - English
+      #        run: |
+      #          for file in ./cv/english/industries/*; do
+      #            sed -i "s|\\subfile{personal_letter/english/industries/ignore}|\\subfile{personal_letter/english/industries/$(basename "$file" .tex)}|g" "english.tex"
+      #            pdflatex -jobname=english_2 "english.tex"
+      #          done
+      #      - name: cleanup
+      #        run: |
+      #          find . -type f ! -name "*.pdf" -delete
+      #
+      #      - name: Upload CV
+      #        uses: actions/upload-artifact@v2
+      #        with:
+      #          name: CVs
+      #          path: |
+      #            ./
