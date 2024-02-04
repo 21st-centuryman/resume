@@ -23,12 +23,9 @@ jobs:
       - name: Create CV - Swedish
         run: |
           for file in personal_letter/swedish/industries/*; do
-            directory="swedish_$(basename "$file" .tex)"
-            if [ ! -d "$directory" ]; then
-              mkdir -p "$directory"
-            fi
             sed -i "s|\\subfile{personal_letter/swedish/industries/ignore}|\\subfile{personal_letter/swedish/industries/$(basename "$file" .tex)}|g" "swedish.tex"
             pdflatex -jobname=swedish_$file "swedish.tex"
+          find . -type f ! -name "*.pdf" -delete
           done
 
       - name: Create CV - English
@@ -36,11 +33,11 @@ jobs:
           for file in personal_letter/english/industries/*; do
             sed -i "s|\\subfile{personal_letter/english/industries/ignore}|\\subfile{personal_letter/english/industries/$(basename "$file" .tex)}|g" "english.tex"
             pdflatex -jobname=english_$file "english.tex"
+            find . -type f ! -name "*.pdf" -delete
           done
 
       - name: cleanup
         run: |
-          find . -type f ! -name "*.pdf" -delete
 
       - name: Upload CV
         uses: actions/upload-artifact@v2
