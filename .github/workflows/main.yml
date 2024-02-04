@@ -22,18 +22,19 @@ jobs:
       - name: Create CV - Swedish
         run: |
           for file in personal_letter/swedish/industrier/*; do
-            sed -i "s|\\subfile{personal_letter/swedish/industrier/ignore}|\\subfile{personal_letter/swedish/industrier/${file%.*}}|" swedish.tex
-            file=${file##*/}; 
             file=${file%.*}; 
-            pdflatex -jobname=swedish_$file swedish.tex
+            sed -i "s|\\subfile{personal_letter/swedish/industrier/ignore}|\\subfile{personal_letter/swedish/industrier/$file|" swedish.tex
+            pdflatex -jobname=swedish_${file##*/} swedish.tex
           done
 
       - name: Create CV - English
         run: |
           for file in personal_letter/english/industries/*; do
-            sed -i "s|\\subfile{personal_letter/english/industries/ignore}|\\subfile{personal_letter/english/industries/$(basename "$file" .tex)}|g" "english.tex"
-            pdflatex -output-directory=pdfs -jobname=english_$file "english.tex"
+            file=${file%.*}; 
+            sed -i "s|\\subfile{personal_letter/english/industrier/ignore}|\\subfile{personal_letter/english/industrier/$file|" english.tex
+            pdflatex -jobname=english_${file##*/} english.tex
           done
+
 
       - name: cleanup
         run: |
