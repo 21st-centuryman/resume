@@ -1,5 +1,5 @@
 # Fdb version 4
-["pdflatex"] 1707070404 "english.tex" "english.pdf" "english" 1707070404 2
+["pdflatex"] 1707070547 "english.tex" "english.pdf" "english" 1707070548 0
   "/usr/local/texlive/2023/texmf-dist/fonts/map/fontname/texfonts.map" 1577235249 3524 cb3e574dea2d1052e39280babc910dc8 ""
   "/usr/local/texlive/2023/texmf-dist/fonts/tfm/public/cm/cmss10.tfm" 1136768653 1316 b636689f1933f24d1294acdf6041daaa ""
   "/usr/local/texlive/2023/texmf-dist/fonts/tfm/public/cm/cmss12.tfm" 1136768653 1324 37b971caf729d7edd9cbb9f9b0ea76eb ""
@@ -36,8 +36,17 @@
   "/usr/local/texlive/2023/texmf-var/fonts/map/pdftex/updmap/pdftex.map" 1693818372 4623355 b8cad38412faebe1ce5b780a45db67bd ""
   "/usr/local/texlive/2023/texmf-var/web2c/pdftex/pdflatex.fmt" 1693818333 7883466 6939c1e22442d2badddd5e35069b7019 ""
   "/usr/local/texlive/2023/texmf.cnf" 1678822455 577 1b2b1af17af2508fb20dd85783af4050 ""
-  "english.aux" 1707070403 532 0d90261937089d1677e8601c1b906ef5 "pdflatex"
-  "english.tex" 0 -1 0 ""
+  "English.cls" 1707070546 1650 ef8db518c5ddf4b130fa7ee67b5e66d0 ""
+  "cv/english/education.tex" 1707070546 746 81594563e26921f0e846afa43f0d069e ""
+  "cv/english/experience.tex" 1707070546 1052 6c8f22cad0633b94a98d36db10e53970 ""
+  "cv/english/other.tex" 1707070546 412 743aebb8f94150a6676977999f0f0124 ""
+  "cv/english/projects.tex" 1707070546 1577 9cbb34083e4cc64d51acaf61ce52a541 ""
+  "cv/english/title.tex" 1707070546 83 453076e2d370cd2fde39c83aa8901e86 ""
+  "english.aux" 1707070548 532 0d90261937089d1677e8601c1b906ef5 "pdflatex"
+  "english.tex" 1707070546 669 80f7c4f0e6e6b16416d59e5ee7feabe9 ""
+  "personal_letter/english/conclusion.tex" 1707070546 567 6ff7562ab5a9b74b24027fad966d55fc ""
+  "personal_letter/english/industries/CI-CD.tex" 1707070546 725 15ac2703044733401ca783c462a8a311 ""
+  "personal_letter/english/introduction.tex" 1707070546 2744 6c3457e32991a88166c8302d27820d17 ""
   (generated)
   "english.aux"
   "english.log"
