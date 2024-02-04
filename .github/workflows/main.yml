@@ -22,7 +22,9 @@ jobs:
       - name: Create CV - Swedish
         run: |
           for file in ./cv/swedish/industrier/*; do
+            echo "-------------------------"
             echo $file
+            echo "-------------------------"
             sed -i "s|\\subfile{personal_letter/swedish/industrier/ignore}|\\subfile{personal_letter/swedish/industrier/$(basename "$file" .tex)}|g" "swedish.tex"
             pdflatex -jobname=swedish_1 "swedish.tex"
           done
