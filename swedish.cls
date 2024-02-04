@@ -1,6 +1,6 @@
 \NeedsTeXFormat{LaTeX2e}
 
-\ProvidesClass{cv_class}[2022/11/21 Resume styling]
+\ProvidesClass{Swedish}[2022/11/21 Resume styling]
 
 \LoadClass[9pt]{article}
 
