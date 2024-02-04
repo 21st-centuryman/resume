@@ -21,12 +21,13 @@ jobs:
 
       - name: Create CV - Swedish
         run: |
-          for file in ./cv/swedish/industrier/*; do
+          cd ./cv/swedish/industrier/
+          for file in *; do
             echo "-------------------------"
             echo $file
             echo "-------------------------"
-            sed -i "s|\\subfile{personal_letter/swedish/industrier/ignore}|\\subfile{personal_letter/swedish/industrier/$(basename "$file" .tex)}|g" "swedish.tex"
-            pdflatex -jobname=swedish_1 "swedish.tex"
+          #sed -i "s|\\subfile{personal_letter/swedish/industrier/ignore}|\\subfile{personal_letter/swedish/industrier/$(basename "$file" .tex)}|g" "swedish.tex"
+          #pdflatex -jobname=swedish_1 "swedish.tex"
           done
 
       #      - name: Create CV - English
