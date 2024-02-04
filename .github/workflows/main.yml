@@ -38,6 +38,8 @@ jobs:
 
       - name: Cleanup
         run: |
+          rm swedish_ignore.pdf
+          rm english_ignore.pdf
           find . -type f ! -name "*.pdf" -exec rm {} +
 
       - name: Upload CV
