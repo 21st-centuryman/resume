@@ -17,25 +17,28 @@ jobs:
         run: |
           sudo apt-get update
           sudo apt-get install -y texlive-latex-base texlive-fonts-recommended texlive-fonts-extra
+          mkdir pdfs
 
       - name: Create CV - Swedish
         run: |
-          mkdir compiled
           for file in ./cv/swedish/industrier/*; do
             sed -i "s|\\subfile{personal_letter/swedish/industrier/test}|\\subfile{personal_letter/swedish/industrier/$(basename "$file" .tex)}|g" "swedish.tex"
-            pdflatex -jobname=compiled/swedish_$(basename "$file" .tex) "swedish.tex"
+            pdflatex -jobname=pdfs/swedish_$(basename "$file" .tex) "swedish.tex"
           done
 
-      #      - name: Create CV - English
-      #        run: |
-      #          for file in ./cv/english/industries/*; do
-      #            sed -i "s|\\subfile{personal_letter/english/industries/test}|\\subfile{personal_letter/english/industries/$(basename "$file" .tex)}|g" "english.tex"
-      #            pdflatex -jobname=english_$(basename "$file" .tex) "english.tex"
-      #          done
+      - name: Create CV - English
+        run: |
+          for file in ./cv/english/industries/*; do
+            sed -i "s|\\subfile{personal_letter/english/industries/test}|\\subfile{personal_letter/english/industries/$(basename "$file" .tex)}|g" "english.tex"
+            pdflatex -jobname=pdfs/english_$(basename "$file" .tex) "english.tex"
+          done
+      - name: cleanup
+        run: |
+          find pdfs -type f ! -name "*.pdf" -delete
 
       - name: Upload CV
         uses: actions/upload-artifact@v2
         with:
           name: CVs
           path: |
-            compiled/*
+            pdfs/
