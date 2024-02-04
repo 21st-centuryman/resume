@@ -1,0 +1,26 @@
+name: Compile CV
+
+on:
+  push:
+    branches:
+      - main
+
+jobs:
+  main:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout Repository
+        uses: actions/checkout@v2
+
+      - name: Build
+        run: |
+          sudo apt-get update
+          sudo apt-get install -y pdflatex
+
+      - name: Create CV
+        run: |
+          pdflatex english.tex
+          pdflatex swedish.tex
+
+
