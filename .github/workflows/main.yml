@@ -18,16 +18,16 @@ jobs:
           sudo apt-get update
           sudo apt-get install -y texlive-latex-base texlive-fonts-recommended texlive-fonts-extra
 
-      - name: Create CV
+      - name: Create CV - Swedish
         run: |
-          pdflatex english.tex
-          pdflatex swedish.tex
-
+          for file in /path/to/directory/*.tex; do
+            sed -i "s|\\subfile{personal_letter/swedish/industrier/hackare}|\\subfile{personal_letter/swedish/industrier/$(basename "$file" .tex)}|g" "swedish.tex"
+            pdflatex "swedish_$file.tex"
+          done
 
       - name: Upload CV
         uses: actions/upload-artifact@v2
         with:
           name: CVs
           path: |
-            english.pdf
-            swedish.pdf
+            swedish_*.pdf
