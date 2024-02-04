@@ -13,11 +13,11 @@ jobs:
       - name: Checkout Repository
         uses: actions/checkout@v2
 
-      - name: Build
-        run: |
-          sudo apt-get update
-          sudo apt-get install -y texlive-latex-base texlive-fonts-recommended texlive-fonts-extra
-          mkdir pdfs
+      #      - name: Build
+      #        run: |
+      #          sudo apt-get update
+      #          sudo apt-get install -y texlive-latex-base texlive-fonts-recommended texlive-fonts-extra
+      #          mkdir pdfs
 
       - name: Create CV - Swedish
         run: |
