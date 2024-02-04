@@ -22,7 +22,7 @@ jobs:
       - name: Create CV - Swedish
         run: |
           #ls
-          for file in cd/swedish/industrier/*; do
+          for file in swedish/industrier/*; do
             echo "-------------------------"
             echo $file
             echo "-------------------------"
