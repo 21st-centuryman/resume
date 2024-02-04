@@ -20,9 +20,10 @@ jobs:
 
       - name: Create CV - Swedish
         run: |
+          mkdir compiled
           for file in ./cv/swedish/industrier/*; do
             sed -i "s|\\subfile{personal_letter/swedish/industrier/test}|\\subfile{personal_letter/swedish/industrier/$(basename "$file" .tex)}|g" "swedish.tex"
-            pdflatex -jobname=swedish_$(basename "$file" .tex) "swedish.tex"
+            pdflatex -jobname=compiled/swedish_$(basename "$file" .tex) "swedish.tex"
           done
 
       #      - name: Create CV - English
@@ -37,4 +38,4 @@ jobs:
         with:
           name: CVs
           path: |
-            ./cv/swedish/industrier/swedish_*.pdf
+            compiled/*
