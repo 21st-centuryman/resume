@@ -37,5 +37,4 @@ jobs:
         with:
           name: CVs
           path: |
-            english_*.pdf
-            swedish_*.pdf
+            *.pdf
