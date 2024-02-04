@@ -1,5 +1,13 @@
 # Fdb version 4
-["pdflatex"] 1707070335 "swedish.tex" "swedish.pdf" "swedish" 1707070336 2
+["pdflatex"] 1707070405 "swedish.tex" "swedish.pdf" "swedish" 1707070405 2
+  "/usr/local/texlive/2023/texmf-dist/fonts/map/fontname/texfonts.map" 1577235249 3524 cb3e574dea2d1052e39280babc910dc8 ""
+  "/usr/local/texlive/2023/texmf-dist/fonts/tfm/public/cm/cmss10.tfm" 1136768653 1316 b636689f1933f24d1294acdf6041daaa ""
+  "/usr/local/texlive/2023/texmf-dist/fonts/tfm/public/cm/cmss12.tfm" 1136768653 1324 37b971caf729d7edd9cbb9f9b0ea76eb ""
+  "/usr/local/texlive/2023/texmf-dist/fonts/tfm/public/cm/cmss17.tfm" 1136768653 1320 ed93d62c5f2c16343826001f03341dbc ""
+  "/usr/local/texlive/2023/texmf-dist/fonts/tfm/public/cm/cmss9.tfm" 1136768653 1320 49357c421c0d469f88b867dd0c3d10e8 ""
+  "/usr/local/texlive/2023/texmf-dist/fonts/tfm/public/cm/cmssbx10.tfm" 1136768653 1272 e2d13f0df30bf3ad990bb9d028e37f34 ""
+  "/usr/local/texlive/2023/texmf-dist/fonts/tfm/public/cm/cmssi10.tfm" 1136768653 1520 ca2bb4b78ac9800bd686e30c6d19ef95 ""
+  "/usr/local/texlive/2023/texmf-dist/fonts/tfm/public/cm/cmssi12.tfm" 1136768653 1532 48589e216c7fb787d0f3ee1a3047705d ""
   "/usr/local/texlive/2023/texmf-dist/fonts/type1/public/amsfonts/cm/cmss10.pfb" 1248133631 24457 5cbb7bdf209d5d1ce9892a9b80a307cc ""
   "/usr/local/texlive/2023/texmf-dist/fonts/type1/public/amsfonts/cm/cmss17.pfb" 1248133631 24416 36515493f76659302880e2604105b074 ""
   "/usr/local/texlive/2023/texmf-dist/fonts/type1/public/amsfonts/cm/cmss9.pfb" 1248133631 24373 a91d375736817a75026663adcb2190c1 ""
@@ -24,7 +32,11 @@
   "/usr/local/texlive/2023/texmf-dist/tex/latex/titlesec/titlesec.sty" 1625518490 48833 3b7b4cfab1a3d15596bfd3772a77ab65 ""
   "/usr/local/texlive/2023/texmf-dist/tex/latex/titling/titling.sty" 1252107870 7358 95ac619994bd30d405a74f3eca431c84 ""
   "/usr/local/texlive/2023/texmf-dist/tex/latex/tools/xspace.sty" 1654720880 4545 4c279ac9292a1be8afa9ab2f1d3299c2 ""
-  "swedish.aux" 1707069888 548 072df873d0570401874c7dc6b19244f8 "pdflatex"
+  "/usr/local/texlive/2023/texmf-dist/web2c/texmf.cnf" 1677365944 40745 87bb86a62d462f93a1efc6b0c65c872e ""
+  "/usr/local/texlive/2023/texmf-var/fonts/map/pdftex/updmap/pdftex.map" 1693818372 4623355 b8cad38412faebe1ce5b780a45db67bd ""
+  "/usr/local/texlive/2023/texmf-var/web2c/pdftex/pdflatex.fmt" 1693818333 7883466 6939c1e22442d2badddd5e35069b7019 ""
+  "/usr/local/texlive/2023/texmf.cnf" 1678822455 577 1b2b1af17af2508fb20dd85783af4050 ""
+  "swedish.aux" 1707070403 548 072df873d0570401874c7dc6b19244f8 "pdflatex"
   "swedish.tex" 0 -1 0 ""
   (generated)
   "swedish.aux"
