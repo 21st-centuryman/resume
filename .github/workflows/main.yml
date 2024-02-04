@@ -35,10 +35,6 @@ jobs:
             pdflatex -jobname=english_${file##*/} english.tex
           done
 
-
-      - name: cleanup
-        run: |
-
       - name: Upload CV
         uses: actions/upload-artifact@v2
         with:
