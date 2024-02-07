@@ -1,6 +1,6 @@
 \NeedsTeXFormat{LaTeX2e}
 
-\ProvidesClass{English}[2022/11/21 Resume styling]
+\ProvidesClass{Style}[2022/11/21 Resume styling]
 
 \LoadClass[9pt]{article}
 
@@ -70,7 +70,7 @@
 
 www.calexanderberg.com
 
-Persikogatan 16, 165 63 Hässelby, Sweden
+Persikogatan 16, 165 63 Hässelby, Sverige
 
 +46 708-12 85 16 $|$ carlalexanderberg@gmail.com
 
