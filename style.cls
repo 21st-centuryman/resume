@@ -62,18 +62,3 @@
     \small\hfill{#1}
     \vspace{.1em}
 }
-
-% Format Title
-\renewcommand{\maketitle}{
-\begin{center}
-{\LARGE\theauthor}
-
-www.calexanderberg.com
-
-Persikogatan 16, 165 63 Hässelby, Sverige
-
-+46 708-12 85 16 $|$ carlalexanderberg@gmail.com
-
-github.com/21st-centuryman
-\end{center}
-}
