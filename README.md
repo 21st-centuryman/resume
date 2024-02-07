@@ -1,6 +1,6 @@
 <div align="center">
 
-## CV
+## Resume-e or CV
 #### I got bored of writing my CV so I created a system.
 
 [![Latex](https://img.shields.io/badge/latex-008080.svg?style=for-the-badge&logoColor=white&logo=latex)]()
