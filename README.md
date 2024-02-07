@@ -1,7 +1,7 @@
 <div align="center">
 
 ## Resume-e or CV
-#### I got bored of writing my CV so I created a system.
+#### I got bored of writing my personal letters so I created a system.
 
 [![Latex](https://img.shields.io/badge/latex-008080.svg?style=for-the-badge&logoColor=white&logo=latex)]()
 [![Github](https://img.shields.io/badge/Github_Actions-181717.svg?style=for-the-badge&logoColor=white&logo=github)]()
