@@ -1,0 +1,47 @@
+name: Compile CV
+
+on:
+  push:
+    branches:
+      - main
+
+jobs:
+  main:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout Repository
+        uses: actions/checkout@v2
+
+      - name: Build
+        run: |
+          sudo apt-get update
+          sudo apt-get install -y texlive-latex-base texlive-fonts-recommended texlive-fonts-extra
+
+      - name: Create Swedish documents
+        run: |
+          pdflatex cv/cv_swe.tex
+          for file in personal_letter/swedish/industrier/*; do
+            file="${${file##*/}%.*}"
+            sed "s/replace/$file/" personal_letter/swedish.tex > swe_${file}.tex
+            pdflatex swe_${file}.tex
+          done
+
+      - name: Create English documents
+        run: |
+          pdflatex cv/cv_eng.tex
+          for file in personal_letter/english/industries/*; do
+            file="${${file##*/}%.*}"
+            sed "s/replace/$file/"  personal_letter/english.tex >  eng_${file}.tex
+            pdflatex eng_${file}.tex
+          done
+
+      - name: Cleanup
+        run: find . -type f ! -name "*.pdf" -exec rm {} +
+
+      - name: Upload CV
+        uses: actions/upload-artifact@v2
+        with:
+          name: CVs
+          path: |
+            ./
